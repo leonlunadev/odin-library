@@ -10,8 +10,11 @@ const NewBook = document.querySelector("button");
 
 NewBook.addEventListener("click", NewBookTest);
 
-function NewBookTest() {
-  const NewDiv = document.createElement("div");
-  NewDiv.appendChild(document.createTextNode("New Book!"));
-  document.body.appendChild(NewDiv);
+function NewBookTest(e) {
+  const popup = document.createElement("div");
+  const form = document.createElement("div");
+  popup.className += "popup";
+  form.className += "form";
+  popup.appendChild(form);
+  document.body.appendChild(popup);
 }
