@@ -4,7 +4,7 @@
   background-color: red;
 }
 
-.form {
+.formWindow {
   background-color: lightblue;
   height: 400px;
   width: 300px;
@@ -12,6 +12,7 @@
   border-radius: 10px;
   backdrop-filter: blur(8px);
   position: absolute;
+  text-align: center;
 }
 
 body {
@@ -42,6 +43,7 @@ button {
 }
 
 .popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
