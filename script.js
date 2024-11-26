@@ -1,4 +1,5 @@
 const myLibrary = [];
+let numBooks = 0;
 
 function Book(title, author) {
   this.author = author;
@@ -11,19 +12,18 @@ function addBookToLibrary(book) {
 
 function displayBooks() {
   const bookshelf = document.getElementById("bookshelf");
-  console.log("hello");
-  for (const book of myLibrary) {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    const title = document.createElement("h1");
-    console.log(book.title);
-    title.textContent = book.title;
-    const author = document.createElement("h2");
-    author.textContent = book.author;
-    card.appendChild(title);
-    card.appendChild(author);
-    bookshelf.appendChild(card);
-  }
+
+  const card = document.createElement("div");
+  card.classList.add("card");
+  const title = document.createElement("h1");
+
+  title.textContent = myLibrary[numBooks].title;
+  const author = document.createElement("h2");
+  author.textContent = myLibrary[numBooks].author;
+  card.appendChild(title);
+  card.appendChild(author);
+  bookshelf.appendChild(card);
+  numBooks += 1;
 }
 
 const NewBook = document.getElementById("newBook");
