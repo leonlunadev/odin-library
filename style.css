@@ -45,6 +45,9 @@ button {
   width: 1400px;
   height: 800px;
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .container {
@@ -63,4 +66,11 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Ensure it's above other elements */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
 }
