@@ -4,6 +4,11 @@
   background-color: red;
 }
 
+form {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
 .formWindow {
   background-color: lightblue;
   height: 400px;
@@ -42,8 +47,11 @@ button {
   display: grid;
 }
 
-.popup {
+.container {
   display: none;
+}
+
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -55,12 +63,4 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Ensure it's above other elements */
-}
-
-.content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
 }
