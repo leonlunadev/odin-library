@@ -1,24 +1,6 @@
-.book {
-  height: 400px;
-  width: 50px;
-  background-color: red;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 100px 100px;
-}
-
-.formWindow {
-  background-color: lightblue;
-  height: 400px;
-  width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  backdrop-filter: blur(8px);
-  position: absolute;
-  text-align: center;
-  z-index: 1;
+.close {
+  height: 20px;
+  width: 20px;
 }
 
 body {
@@ -51,6 +33,13 @@ button {
   gap: 20px;
 }
 
+.card {
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
 .container {
   display: none;
 }
@@ -69,9 +58,31 @@ button {
   z-index: 1000; /* Ensure it's above other elements */
 }
 
-.card {
-  background-color: white;
+.formWindow {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 3fr;
+  background-color: lightblue;
+  height: 500px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  text-align: center;
-  margin: 10px;
+}
+
+.banner {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 50px 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  position: relative;
+  right: -370px;
+  top: 10px;
 }
