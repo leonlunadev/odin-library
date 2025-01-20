@@ -43,6 +43,9 @@ form.addEventListener("submit", (event) => {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
 
+  document.getElementById("title").value = "";
+  document.getElementById("author").value = "";
+
   const container = document.getElementById("container");
   container.classList.add("container");
 
@@ -51,4 +54,13 @@ form.addEventListener("submit", (event) => {
   addBookToLibrary(newBook);
 
   displayBooks();
+});
+
+const closeNewBook = document.getElementById("close-new-book");
+
+closeNewBook.addEventListener("click", (event) => {
+  const container = document.getElementById("container");
+  document.getElementById("title").value = "";
+  document.getElementById("author").value = "";
+  container.classList.add("container");
 });
