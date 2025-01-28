@@ -15,11 +15,26 @@ function displayBooks() {
 
   const card = document.createElement("div");
   card.classList.add("card");
+
+  //<svg id="close-new-book" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+
+  const path = document.createElementNS(svgNS, "path");
+  path.setAttribute(
+    "d",
+    "M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+  );
+
+  svg.appendChild(path);
+
   const title = document.createElement("h1");
 
   title.textContent = myLibrary[numBooks].title;
   const author = document.createElement("h2");
   author.textContent = myLibrary[numBooks].author;
+  card.appendChild(svg);
   card.appendChild(title);
   card.appendChild(author);
   bookshelf.appendChild(card);
@@ -64,3 +79,7 @@ closeNewBook.addEventListener("click", (event) => {
   document.getElementById("author").value = "";
   container.classList.add("container");
 });
+
+// delete book
+
+// book read
