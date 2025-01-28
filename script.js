@@ -22,6 +22,8 @@ function displayBooks() {
   const svgNS = "http://www.w3.org/2000/svg";
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("id", id);
+  svg.addEventListener("click", handleDeleteBook);
 
   const path = document.createElementNS(svgNS, "path");
   path.setAttribute(
@@ -36,6 +38,7 @@ function displayBooks() {
   title.textContent = myLibrary[numBooks].title;
   const author = document.createElement("h2");
   author.textContent = myLibrary[numBooks].author;
+
   card.setAttribute("id", id);
   card.appendChild(svg);
   card.appendChild(title);
@@ -84,5 +87,11 @@ closeNewBook.addEventListener("click", (event) => {
 });
 
 // delete book
+
+function handleDeleteBook(event) {
+  const divID = event.currentTarget.id;
+
+  alert(divID);
+}
 
 // book read
