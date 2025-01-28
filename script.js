@@ -90,8 +90,9 @@ closeNewBook.addEventListener("click", (event) => {
 
 function handleDeleteBook(event) {
   const divID = event.currentTarget.id;
-
-  alert(divID);
+  delete myLibrary[divID];
+  const element = document.getElementById(divID);
+  element.remove();
 }
 
 // book read
