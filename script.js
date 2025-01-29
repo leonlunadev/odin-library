@@ -1,9 +1,10 @@
 const myLibrary = {};
 let numBooks = 0;
 
-function Book(title, author) {
+function Book(title, author, read) {
   this.author = author;
   this.title = title;
+  this.read = read;
 }
 
 function addBookToLibrary(book) {
@@ -39,6 +40,10 @@ function displayBooks() {
   const author = document.createElement("h2");
   author.textContent = myLibrary[numBooks].author;
 
+  if (myLibrary[numBooks].read) {
+  } else {
+  }
+
   card.setAttribute("id", id);
   card.appendChild(svg);
   card.appendChild(title);
@@ -63,6 +68,7 @@ form.addEventListener("submit", (event) => {
 
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
+  const read = document.getElementById("read").checked;
 
   document.getElementById("title").value = "";
   document.getElementById("author").value = "";
@@ -70,7 +76,7 @@ form.addEventListener("submit", (event) => {
   const container = document.getElementById("container");
   container.classList.add("container");
 
-  const newBook = new Book(title, author);
+  const newBook = new Book(title, author, read);
 
   addBookToLibrary(newBook);
 
