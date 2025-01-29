@@ -40,14 +40,25 @@ function displayBooks() {
   const author = document.createElement("h2");
   author.textContent = myLibrary[numBooks].author;
 
+  const readDiv = document.createElement("div");
+
   if (myLibrary[numBooks].read) {
+    readDiv.classList.add("read");
+    const text = document.createElement("h3");
+    text.textContent = "Read";
+    readDiv.appendChild(text);
   } else {
+    readDiv.classList.add("unread");
+    const text = document.createElement("h3");
+    text.textContent = "Unread";
+    readDiv.appendChild(text);
   }
 
   card.setAttribute("id", id);
   card.appendChild(svg);
   card.appendChild(title);
   card.appendChild(author);
+  card.appendChild(readDiv);
   bookshelf.appendChild(card);
   numBooks += 1;
 }
