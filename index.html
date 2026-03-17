@@ -17,15 +17,22 @@
                     <h1>Book Information</h1>
                 </div>
                   <form action="">
-                    <label for="title">Title: </label>
-                    <input id="title" type="text" placeholder="Enter title of book...">
-               
-                    <label for="author">Author: </label>
-                    <input id="author" type="text" placeholder="Enter author of book...">
-                    <label for="read">Have you read this book?</label>
-                    <input type="checkbox" id="read" >
-                    <button type="submit">Submit</button>
+                    <div>
+                      <label for="title">Title</label>
+                      <input id="title" type="text" placeholder="Enter book title..." required>
+                    </div>
 
+                    <div>
+                      <label for="author">Author</label>
+                      <input id="author" type="text" placeholder="Enter author name..." required>
+                    </div>
+
+                    <div class="checkbox-group">
+                      <input type="checkbox" id="read">
+                      <label for="read">I have read this book</label>
+                    </div>
+
+                    <button type="submit">Add to Library</button>
                 </form>
               
                 
