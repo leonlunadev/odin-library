@@ -1,9 +1,9 @@
-#Library Specification
+# Library Specification
 
 Make a library project that allows you to add and remove books to a bookshelf. 
 
 
-##Tasks 
+## Tasks 
 
 - Make the bookshelf background ornate with css
 - Make the bookshelf have different levels
