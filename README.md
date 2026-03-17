@@ -1,12 +1,12 @@
-Form for creating a book
+#Library Specification
 
-bookshelf
+Make a library project that allows you to add and remove books to a bookshelf. 
 
-book
 
-add actual form to form
-handle submisison of form
-add book to book array
-add book from book array to screen
+##Tasks 
 
-book remove button, book read button
+- Make the bookshelf background ornate with css
+- Make the bookshelf have different levels
+- Make a book that actually looks like a book on a bookshelf
+- Make add book form more professional
+- Refactor the code to use classes, optimize the code to update the dom when pushing to the library. 
